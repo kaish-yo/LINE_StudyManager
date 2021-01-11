@@ -4,3 +4,4 @@ flask_sqlalchemy
 datetime
 flask
 psycopg2
+line-bot-sdk=1.8.0
