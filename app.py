@@ -1,3 +1,6 @@
+#Postgres用
+import os
+
 #ライブラリをインストール
 from flask import Flask, request, abort
 from time import time
@@ -24,7 +27,8 @@ def create_tables():
     db.create_all()
 
 #Direct the location of the database
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
+##Herokuの場合は第一引数、ローカルの場合は第二引数を参照するように設定
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL','sqlite:///data.db')
 #Disable track recording in SQLAlchemy so as to work faster
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 

@@ -3,4 +3,3 @@ future
 flask_sqlalchemy
 datetime
 flask
-sqlite3
