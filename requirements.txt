@@ -3,4 +3,4 @@ future
 flask_sqlalchemy
 datetime
 flask
-psychopg2
+psycopg2
