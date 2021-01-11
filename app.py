@@ -110,4 +110,5 @@ def handle_message(event):
 
 if __name__ == "__main__":
     db.init_app(app)
+    app.debug = True
     app.run()
